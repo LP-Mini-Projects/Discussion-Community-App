@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { View,Text,TextInput, StyleSheet } from "react-native";
+import { View,TextInput, StyleSheet } from "react-native";
 
 const Input=(props)=>{
 
@@ -11,6 +11,7 @@ const Input=(props)=>{
                 id={props.id}
                 value={props.value}
                 onChangeText={props.onChangeText}
+                placeholderTextColor={props.placeholderTextColor}
             />
         </View>
     )
@@ -22,19 +23,20 @@ const styles=StyleSheet.create({
         // height:20,
         top:5.5,
         backgroundColor:'#FFFFFF',
-        fontSize:14,
+        fontSize:15,
         paddingTop:8.7,
         marginBottom:14,
+        color:'black',
     },
     input:{
         height:60,
         width:326,
+        marginTop:8,
         backgroundColor:'#FFFFFF',
         paddingRight:16,
         paddingLeft:14,
         borderRadius:4,
         alignItems:'center',
-        flexDirection:'row',
         marginBottom:16,
         paddingbottom:14,
     },
