@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-native-elements';
 import Input from '../components/input';
 import PassInput from '../components/passwordinput';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-
+import { buttonColor,buttonTextColor } from '../config/colors';
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
@@ -41,6 +41,12 @@ export default function Login({ navigation }) {
             </TouchableOpacity>
           </View>
 
+          <View style={{marginLeft:5}}>
+            <TouchableOpacity style={styles.button}>
+              <Text style={{color:buttonTextColor}}>Login</Text>
+            </TouchableOpacity>
+          </View>
+
           <View style={{ marginTop: 40, flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ flex: 1, height: 1, backgroundColor: 'white' }} />
             <View style={{ backgroundColor: 'white', width: 60, }}>
@@ -59,6 +65,9 @@ export default function Login({ navigation }) {
               onPress={() => { }}
             />
           </View>
+          <TouchableOpacity onPress={()=>{navigation.navigate('SignUp')}}>
+              <Text style={{color: '#ACACAC', textDecorationLine: 'underline',alignSelf:'center' }}>Don't have an account? Sign Up</Text>
+            </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
@@ -92,5 +101,14 @@ const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     resizeMode: 'center'
-  }
+  },
+  button: {
+    marginTop:36,
+    height:46,
+    alignItems: "center",
+    backgroundColor: buttonColor,
+    paddingVertical:12,
+    borderRadius:8,
+    width:326,
+  },
 });
