@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 
 import Login from './src/screens/Login';
-import Signup from './src/screens/signup';
+import Signup from './src/screens/Signup';
 
 const Stack = createStackNavigator();
 
